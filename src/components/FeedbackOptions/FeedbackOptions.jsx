@@ -5,7 +5,7 @@ import { Button } from './FeedbackOptions.styled';
 
 export class FeedbackOptions extends Component {
   static propTypes = {
-    // onLeaveFeedback: PropTypes.func.isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired,
     options: PropTypes.arrayOf(PropTypes.string),
   };
 
@@ -17,8 +17,7 @@ export class FeedbackOptions extends Component {
         {options.map(option => (
           <Button
             type="button"
-            value={option}
-            onClick={onLeaveFeedback}
+            onClick={() => onLeaveFeedback(option)}
             key={option}
           >
             {option}
