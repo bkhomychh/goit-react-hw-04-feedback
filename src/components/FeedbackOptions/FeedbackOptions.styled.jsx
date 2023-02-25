@@ -9,11 +9,15 @@ export const Button = styled.button`
   color: white;
   background-color: #586bf8;
   text-transform: uppercase;
+  border-radius: 10px;
 
   transition: all 250ms ease-out;
   cursor: pointer;
 
   &:hover {
+    box-shadow: 0 0 7px 1px blue;
+  }
+  &:active {
     background-color: blue;
   }
 
