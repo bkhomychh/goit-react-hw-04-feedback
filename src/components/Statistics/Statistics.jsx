@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Stats } from './Statistics.styled';
+import { StyledList } from './Statistics.styled';
 
 export class Statistics extends Component {
   static propTypes = {
@@ -17,13 +17,15 @@ export class Statistics extends Component {
 
     return (
       <>
-        <Stats>
-          <li>Good: {good}</li>
-          <li>Neutral: {neutral}</li>
-          <li>Bad: {bad}</li>
-          <li>Total: {total}</li>
-          <li>Positive feedback: {positivePercentage}%</li>
-        </Stats>
+        <StyledList>
+          <li key="good">Good: {good}</li>
+          <li key="neutral">Neutral: {neutral}</li>
+          <li key="bad">Bad: {bad}</li>
+          <li key="total">Total: {total}</li>
+          <li key="positivePercentage">
+            Positive feedback: {positivePercentage}%
+          </li>
+        </StyledList>
       </>
     );
   }
